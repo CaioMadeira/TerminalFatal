@@ -92,17 +92,13 @@
 		2F0E0A9224E32C570062C400 /* TerminalFatal */ = {
 			isa = PBXGroup;
 			children = (
+				2FF67C1425CF23D100AD19FB /* Assets */,
 				2F0E0AAB24E32EC10062C400 /* Model */,
 				2F0E0AAC24E32EE30062C400 /* View */,
 				2F0E0AAD24E32EF30062C400 /* Controllers */,
 				2F0E0A9324E32C570062C400 /* AppDelegate.swift */,
 				2F0E0A9524E32C570062C400 /* SceneDelegate.swift */,
 				2FBE533224E48A4700833A08 /* Podfile */,
-				2FBD79A824E4B9B1006F0460 /* player0image.gif */,
-				2FBD79AA24E4C080006F0460 /* player1image.gif */,
-				2F464F9124E6FDFA0002B1D6 /* playerPrologue.gif */,
-				2F0E0A9C24E32C5A0062C400 /* Assets.xcassets */,
-				2F0E0A9E24E32C5A0062C400 /* LaunchScreen.storyboard */,
 				2F0E0AA124E32C5A0062C400 /* Info.plist */,
 			);
 			path = TerminalFatal;
@@ -121,6 +117,7 @@
 		2F0E0AAC24E32EE30062C400 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F0E0A9E24E32C5A0062C400 /* LaunchScreen.storyboard */,
 				2F0E0A9924E32C570062C400 /* Main.storyboard */,
 			);
 			path = View;
@@ -140,6 +137,8 @@
 		2FF67C0E25CF178000AD19FB /* SelectPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				2FBD79A824E4B9B1006F0460 /* player0image.gif */,
+				2FBD79AA24E4C080006F0460 /* player1image.gif */,
 				2FBE533024E4738F00833A08 /* SelectPlayerController.swift */,
 			);
 			path = SelectPlayer;
@@ -148,9 +147,18 @@
 		2FF67C0F25CF17BE00AD19FB /* Prologue */ = {
 			isa = PBXGroup;
 			children = (
+				2F464F9124E6FDFA0002B1D6 /* playerPrologue.gif */,
 				2F464F9324E706BB0002B1D6 /* PrologueController.swift */,
 			);
 			path = Prologue;
+			sourceTree = "<group>";
+		};
+		2FF67C1425CF23D100AD19FB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2F0E0A9C24E32C5A0062C400 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		9A424B5C21615583A2D6FC88 /* Frameworks */ = {

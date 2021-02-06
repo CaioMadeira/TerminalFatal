@@ -15,8 +15,8 @@ class SelectPlayerController: UIViewController{
     var playerName = ""
     var playerTerminal = ""
     
-    let defaultName = "Operador:"
-    let defaultTerminal = "Terminal:"
+    let defaultName = ">Operador:"
+    let defaultTerminal = ">Terminal:"
     
     
     //MARK: - Aqui as variaveis sao declaradas como opcionais. Basicamente, digo ao XCode que não sei se ela vai ter um valor. (No caso, se ela vai ou não carregar um GIF)
@@ -33,13 +33,15 @@ class SelectPlayerController: UIViewController{
         super.viewDidLoad()
         
         
-        nameLabel.text = defaultName + " " + playerName
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        nameLabel.textColor = .systemGreen
-        nameLabel.backgroundColor = .black
+        self.nameLabel.text = self.defaultName + " " + playerName
+        self.nameLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        self.nameLabel.textColor = .systemGreen
+        self.nameLabel.backgroundColor = .black
         
-        terminalLabel.text = playerTerminal
-        
+        self.terminalLabel.text = self.defaultTerminal + " " + playerTerminal
+        self.terminalLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        self.terminalLabel.textColor = .systemGreen
+        self.terminalLabel.backgroundColor = .black
         
         
         
@@ -79,9 +81,15 @@ class SelectPlayerController: UIViewController{
     
     
     @IBAction func newGame(_ sender: AnyObject) {
-        let thirdVC = PrologueController()
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+            if segue.identifier == "NewGame"{
+                let thirdVC = PrologueController()
+                
+                self.present(thirdVC, animated: true, completion: nil)
+            }
+        }
         
-        self.present(thirdVC, animated: true, completion: nil)
         
     }
     
@@ -93,7 +101,6 @@ class SelectPlayerController: UIViewController{
         
     }
     
-    var player = [Controladores(nome: " aaaa ", terminal: "12")]
     
     
 
